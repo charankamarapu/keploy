@@ -1,5 +1,10 @@
 name: Release
-on: [pull_request]
+on:
+  push:
+    tags:
+    - 'v*.*.*'
+  workflow_dispatch: # Allows manual trigger
+  
 permissions:
   contents: write
 
